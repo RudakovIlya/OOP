@@ -21,3 +21,13 @@ class ModernButton extends Button {
 }
 
 const modernButton = new ModernButton(200, 45, 'yellow', 'Modern Button', 'modern__button', '.button', 20).render();
+
+new ModernButton(200, 45, 'yellow', 'Modern Button', 'modern__button', '.button', 20).render();
+
+new ModernButton(200, 35, 'red', 'Modern Button', 'modern__button', '.button', 30).render();
+
+new ModernButton(200, 55, 'blue', 'Modern Button', 'modern__button', '.button', 40).render();
+
+new ModernButton(200, 65, 'green', 'Modern Button', 'modern__button', '.button', 50).render();
+
+new ModernButton(200, 75, 'brown', 'Modern Button', 'modern__button', '.button', 60).render();
