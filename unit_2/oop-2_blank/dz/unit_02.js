@@ -19,6 +19,7 @@ const cpu = {
 
 	'sale'(p) {
 		this.amount = this.amount - (this.amount * p / 100);
+		return this.amount
 	}
 
 }
