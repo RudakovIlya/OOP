@@ -32,6 +32,12 @@ class Button {
 
         button.textContent = this.value;
 
+        this.parentSelector.style.display = 'flex';
+
+        this.parentSelector.style.alignItems = 'center';
+
+        this.parentSelector.style.justifyContent = 'space-between';
+
         this.parentSelector.append(button);
 
         return button;
