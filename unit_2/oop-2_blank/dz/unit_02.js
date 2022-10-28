@@ -28,6 +28,21 @@ const cpu = {
 
 // создаем memory тут.
 
+const memory = {
+
+	__proto__: cpu,
+
+}
+
+memory.producer = 'Hynix';
+
+memory.amount = 60;
+
+memory.memory = 2048;
+
+memory.name = 'Hynix DDR4 - 2666';
+
+memory.family = 'DDR4';
 
 //Task 3.
 // Представим себе ситуацию, что мы начали использовать данные объекты на странице и поняли что нам не хватает изображения. Добавим свойство image в объект cpu. Поскольку, memory наследуется cpu то данное свойство появится и у него. Просто дописываем данное свойство в cpu.
