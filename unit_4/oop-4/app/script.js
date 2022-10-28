@@ -1,40 +1,48 @@
-// class User {
-//     constructor(name) {
-//         this.name = name;
-//     }
-//     sayHello() {
-//         console.log(this.name + ' Hello ');
-//         return this.name;
-//     }
-// }
+//class User {
 
-// const alex = new User('Alex');
-// console.log(alex);
+//    constructor(name) {
+//        this.name = name;
+//    }
+//    sayHello() {
+//        console.log(this.name + ' Hello ');
+//        return this.name
+//    }
+//}
 
-// class Person extends User {
-//     constructor(name, email) {
-//         super(name);
-//         this.email = email;
-//     }
-//     sayHello() {
-//         console.log(super.sayHello());
-//         console.log(this.email);
-//     }
-// }
+//const alex = new User('Alex');
+//console.log(alex);
 
-// const li = new Person('li', 'li@email.ua');
-// // console.log(li);
-// // console.log(li.sayHello());
-// console.log(li.sayHello());
+//class Person extends User {
+
+//    constructor(name, email) {
+
+//        super(name);
+
+//        this.email = email;
+
+//    }
+
+//    sayHello() {
+//        console.log(super.sayHello());
+//        console.log(this.email);
+//    }
+
+//}
+
+//const Liana = new Person('Liana', 'liana@gmail.com');
+
+////console.log(Liana.sayHello());
+//console.log(Liana.sayHello());
 
 class User {
     sayHello() {
         console.log(this.name + ' Hello ');
-        return this.name;
+        return this.name
     }
 }
 
 const alex = new User();
+
 console.log(alex.sayHello());
 
 class Person extends User {
@@ -43,6 +51,6 @@ class Person extends User {
         this.name = name;
     }
 }
+const li = new Person('li');
 
-const li = new Person('lu');
 console.log(li);
