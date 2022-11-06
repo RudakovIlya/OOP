@@ -7,7 +7,7 @@ function f1_1() {
 
 const f1_2 = () => {
     console.log(this);
-}
+};
 
 document.querySelector('.b-1').onclick = f1_1;
 document.querySelector('.b-1-2').onclick = f1_2;
@@ -22,14 +22,14 @@ function f2() {
 }
 const f2_2 = () => {
     console.log(this);
-}
+};
 
 document.querySelector('.b-2').onclick = function () {
     f2();
-}
+};
 document.querySelector('.b-2-2').onclick = () => {
     f2_2();
-}
+};
 
 // ==================================================
 
@@ -43,32 +43,27 @@ const a3 = {
     },
     three: () => {
         return this.one;
-    }
-}
+    },
+};
 
 document.querySelector('.b-3').onclick = function () {
     console.log(a3);
     console.log('run method two(): ' + a3.two());
     console.log('run method three(): ' + a3.three());
-}
+};
 
 // ==================================================
-
 
 // Task 4
 // По нажатию кнопки b-4 создайте экземпляр класса Test, передайте ему любое число в качестве параметра a. Выведит в консоль результат работы метода  someMethod() , someMethod2
 
-document.querySelector('.b-4').onclick = () => {
-
-}
+document.querySelector('.b-4').onclick = () => {};
 
 // ==================================================
 
 // Task 5
 // По нажатию кнопки b-5 выведите в консоль статическое свойство b класса Test и результат работы статического метода staticMethod().
 
-document.querySelector('.b-5').onclick = () => {
-
-}
+document.querySelector('.b-5').onclick = () => {};
 
 // ==================================================

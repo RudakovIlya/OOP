@@ -1,7 +1,6 @@
 // class -> function
 // ab class - > class - > object
 
-
 let a = 'Ivan';
 let b = '7778889';
 

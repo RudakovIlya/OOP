@@ -1,22 +1,17 @@
 class List2 extends List {
-
     constructor(str, cssClass) {
-
         super(str);
 
         this.cssClass = cssClass;
-
     }
 
     render() {
-
         const newUl = super.render();
 
         newUl.classList.add(this.cssClass);
 
-        return
-
+        return newUl;
     }
 }
 
-const twoUl = new List2(['Ilya', 'Dima', 'Yana', 'Andrei'], 'menu').render();
+new List2([1, 2, 2, 3], 'menu').render();

@@ -1,5 +1,5 @@
 class Test {
-    static b = "ItGid.info";
+    static b = 'ItGid.info';
 
     constructor(a) {
         this.a = a;
@@ -13,7 +13,7 @@ class Test {
     someMethod2 = () => {
         console.log('arrow function');
         return this.a;
-    }
+    };
 
     static staticMethod() {
         return this.b;

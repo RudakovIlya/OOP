@@ -16,16 +16,11 @@ class Student extends User {
     }
 }
 
-
-let orderedCount = text => {
-
-}
+let orderedCount = (text) => {};
 console.log(orderedCount('aaaaaaabbb'));
-
-
 
 const out = document.querySelector('.out-2');
 
 const fad = () => {
     console.log('dsa');
-}
+};

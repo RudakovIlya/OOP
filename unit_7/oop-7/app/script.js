@@ -8,7 +8,6 @@ console.log(this); // window
 
 document.querySelector('.b-1').addEventListener('click', f1);
 
-
 function f1() {
     console.log(this);
     this.style.background = 'orange';
@@ -39,7 +38,7 @@ class YellowSubmarine extends U2 {
     constructor(model, color) {
         super(model);
         this.color = color;
-        console.log('------------')
+        console.log('------------');
         console.log(this.model);
     }
 }

@@ -13,8 +13,7 @@ if (localStorage.getItem('cart')) {
             document.querySelector('.cart-out').append(shopCart.render());
             localStorage.setItem('cart', JSON.stringify(shopCart.items));
             return true;
-        }
-        else if (target.classList.contains('plus')) {
+        } else if (target.classList.contains('plus')) {
             shopCart.goodsPlus(target.dataset['articul']);
             console.log(shopCart);
             document.querySelector('.cart-out').innerHTML = '';
@@ -22,8 +21,7 @@ if (localStorage.getItem('cart')) {
 
             localStorage.setItem('cart', JSON.stringify(shopCart.items));
             return true;
-        }
-        else if (target.classList.contains('minus')) {
+        } else if (target.classList.contains('minus')) {
             shopCart.goodsMinus(target.dataset['articul']);
             document.querySelector('.cart-out').innerHTML = '';
             document.querySelector('.cart-out').append(shopCart.render());

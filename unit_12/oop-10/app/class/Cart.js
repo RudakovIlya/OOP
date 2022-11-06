@@ -1,11 +1,11 @@
 class Cart {
     constructor(
         items, // массив с товарами в корзине
-        cartClass = "cart",
+        cartClass = 'cart',
         plusClass = 'plus',
         minusClass = 'minus',
         deleteClass = 'delete',
-        currency = '',
+        currency = ''
     ) {
         this.items = items;
         this.plusClass = plusClass;
@@ -20,8 +20,7 @@ class Cart {
     goodsMinus(art) {
         if (this.items[art]['count'] - 1 == 0) {
             this.goodsDelete(art);
-        }
-        else {
+        } else {
             this.items[art]['count']--;
         }
     }
@@ -36,7 +35,6 @@ class Cart {
         return total;
     }
     render() {
-
         let table = document.createElement('table'); // create table
         table.classList.add(this.cartClass); // add class from constructor
 
@@ -49,7 +47,7 @@ class Cart {
             let button = document.createElement('button');
             button.classList.add(this.deleteClass);
             button.classList.add('button-primary');
-            button.innerHTML = "x";
+            button.innerHTML = 'x';
             button.setAttribute('data-articul', key);
             td.append(button);
             tr.append(td);
@@ -70,7 +68,7 @@ class Cart {
             button = document.createElement('button');
             button.classList.add(this.minusClass);
             button.classList.add('button-primary');
-            button.innerHTML = "-";
+            button.innerHTML = '-';
             button.setAttribute('data-articul', key);
             td.append(button);
             tr.append(td);
@@ -85,7 +83,7 @@ class Cart {
             button = document.createElement('button');
             button.classList.add(this.plusClass);
             button.classList.add('button-primary');
-            button.innerHTML = "+";
+            button.innerHTML = '+';
             button.setAttribute('data-articul', key);
             td.append(button);
             tr.append(td);
@@ -102,9 +100,13 @@ class Cart {
         let td = document.createElement('td');
         td.setAttribute('colspan', 7); // merge 7 td
         td.style.textAlign = 'right';
-        td.innerHTML = '<span class="total">Total: </span> ' + this.getTotal() + ' ' + this.currency;
+        td.innerHTML =
+            '<span class="total">Total: </span> ' +
+            this.getTotal() +
+            ' ' +
+            this.currency;
         tr.append(td);
-        table.append(tr);// to table
+        table.append(tr); // to table
         return table;
     }
 }

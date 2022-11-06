@@ -3,7 +3,7 @@ class GridView {
      *  properties
      *  @param [array] _tableClass - css классы оформления
      *  @param [array] data  - выходные данные
-     *  @param [array] attribute - управляем что выводим 
+     *  @param [array] attribute - управляем что выводим
      *  @param [array] _element  - куда выводить таблицу
      *  @param [array] _header  - заголовок таблицы
      *  @param [array] _headerClass  - css классы заголовка
@@ -18,8 +18,8 @@ class GridView {
     }
 
     /**
-    *  Method set header
-    */
+     *  Method set header
+     */
 
     setHeader(header) {
         if (typeof header === 'string' && header.trim() != '') {
@@ -30,8 +30,8 @@ class GridView {
     }
 
     /**
-    *  Method set header
-    */
+     *  Method set header
+     */
 
     setHeaderClass(headerClass) {
         if (typeof headerClass === 'object') {
@@ -42,8 +42,8 @@ class GridView {
     }
 
     /**
-    *  Method set element
-    */
+     *  Method set element
+     */
 
     setElement(element) {
         if (document.querySelector(element)) {
@@ -52,7 +52,6 @@ class GridView {
         }
         return false;
     }
-
 
     /**
      *  Method for show GridViewTable
@@ -68,14 +67,14 @@ class GridView {
         if (this._header) {
             const header = document.createElement('h1');
             header.textContent = this._header;
-            this._headerClass.forEach(cssClass => {
+            this._headerClass.forEach((cssClass) => {
                 header.classList.add(cssClass);
             });
             document.querySelector(this._element).append(header);
         }
         // show table
         const table = document.createElement('table');
-        this._tableClass.forEach(cssClass => {
+        this._tableClass.forEach((cssClass) => {
             table.classList.add(cssClass);
         });
         // create table header
@@ -84,8 +83,7 @@ class GridView {
             let th = document.createElement('th');
             if (this.attribute[key].label) {
                 th.textContent = this.attribute[key].label;
-            }
-            else {
+            } else {
                 th.textContent = key;
             }
             trHeader.append(th);
@@ -105,8 +103,7 @@ class GridView {
                 // атрибут src
                 if (this.attribute[key].src) {
                     td.innerHTML = value;
-                }
-                else {
+                } else {
                     td.textContent = value;
                 }
                 tr.append(td);

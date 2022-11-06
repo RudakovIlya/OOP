@@ -1,28 +1,26 @@
 //Task 1
-// Мы создаем основу для интернет магазина, нам необходимо создать объект для описания процессоров. 
+// Мы создаем основу для интернет магазина, нам необходимо создать объект для описания процессоров.
 // добавьте в него свойство производитель (producer) равное например AMD
 // добавьте в него свойство цена (amount) равное например 250.00
 // добавьте в него свойство семейство (family) равное например AMD Ryzen 7
 // добавьте в него название (name) например Ryzen 7 3700X
 
 const cpu = {
+    producer: 'AMD',
 
-	'producer': 'AMD',
+    amount: 250.0,
 
-	'amount': 250.00,
+    family: 'AMD Ryzen 7',
 
-	'family': 'AMD Ryzen 7',
+    name: 'Ryzen 7 3700X',
 
-	'name': 'Ryzen 7 3700X',
+    image: 'https://i2.rozetka.ua/goods/1865699/copy_amd_fx_series_fx_9590_fd9590fhhkwof_58abf05e14fdc_58abfc46c2b65_58abff06c94bd_images_1865699744.jpg',
 
-	'image': 'https://i2.rozetka.ua/goods/1865699/copy_amd_fx_series_fx_9590_fd9590fhhkwof_58abf05e14fdc_58abfc46c2b65_58abff06c94bd_images_1865699744.jpg',
-
-	'sale'(p) {
-		this.amount = this.amount - (this.amount * p / 100);
-		return this.amount
-	}
-
-}
+    sale(p) {
+        this.amount = this.amount - (this.amount * p) / 100;
+        return this.amount;
+    },
+};
 
 //Task 2
 // Создайте наследника объекта cpu и назовите его memory (через proto).Да, мы будем строить магазин, который торгует и памятью.Поскольку мы наследуемся от cpu то все свойства останутся.
@@ -36,10 +34,8 @@ const cpu = {
 // создаем memory тут.
 
 const memory = {
-
-	__proto__: cpu,
-
-}
+    __proto__: cpu,
+};
 
 memory.producer = 'Hynix';
 
@@ -51,7 +47,8 @@ memory.name = 'Hynix DDR4 - 2666';
 
 memory.family = 'DDR4';
 
-memory.image = 'https://i2.rozetka.ua/goods/17090881/189441988_images_17090881613.jpg';
+memory.image =
+    'https://i2.rozetka.ua/goods/17090881/189441988_images_17090881613.jpg';
 
 //Task 3.
 // Представим себе ситуацию, что мы начали использовать данные объекты на странице и поняли что нам не хватает изображения. Добавим свойство image в объект cpu. Поскольку, memory наследуется cpu то данное свойство появится и у него. Просто дописываем данное свойство в cpu.
@@ -62,4 +59,4 @@ memory.image = 'https://i2.rozetka.ua/goods/17090881/189441988_images_1709088161
 // а для memory - ссылку https://i2.rozetka.ua/goods/17090881/189441988_images_17090881613.jpg
 
 // Task 5.
-// Добавьте для cpu метод sale(p) - который возвращает стоимость amount товара с учетом скидки p. Скидка задается в процентах. Например 5%.  
+// Добавьте для cpu метод sale(p) - который возвращает стоимость amount товара с учетом скидки p. Скидка задается в процентах. Например 5%.

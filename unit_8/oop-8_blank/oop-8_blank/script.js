@@ -7,24 +7,23 @@ function f1_1() {
 
 const f1_2 = () => {
     console.log(this);
-}
+};
 
 document.querySelector('.b-1').onclick = () => {
     f1_1(); // ожидаемо теряется this
-}
+};
 document.querySelector('.b-1-2').onclick = () => {
     // теперь передаем this с помощью call
     // вызываем f1_1 и в качестве this передаем b-1
     f1_1.call(document.querySelector('.b-1'));
     // если корректно сделано - то увидите в консоли кнопку b-1
-
-}
+};
 document.querySelector('.b-1-3').onclick = () => {
     // вызываем f1_2 с контектом .b-1-2
     f1_2.call(document.querySelector('.b-1-2'));
     // если вы все сделали верно, то call не помогает
     //Это не влияет на стрелочные функции, потому что у них просто нет this
-}
+};
 
 // ==================================================
 
@@ -32,7 +31,7 @@ document.querySelector('.b-1-3').onclick = () => {
 // Дана функция f2, которая к элементу this применяет background. Запустите данную функцию с помощью call и в качестве контекста задайте блок div-2-1, div-2-2.
 
 function f2() {
-    this.style.background = 'orange'
+    this.style.background = 'orange';
 }
 
 // f2.call();
@@ -52,7 +51,6 @@ function f3(color) {
 
 // ==================================================
 
-
 // Task 4
 // Отличия call и apply только в том, что первый аргументы передает через запятую, а второй - массивом. Запустим функцию f4 с помощью apply, и передадим цвет в массиве, для блока div-4-1 это будет ['red'], для блока div-4-2 это будет ['orange'];
 
@@ -69,7 +67,7 @@ function f4(color) {
 // В остальном, отличий call и apply нет.  Запустите функцию f5 с помощью apply и в качестве контекста задайте блок div-5-1, div-5-2.
 
 function f5() {
-    this.style.background = 'orange'
+    this.style.background = 'orange';
 }
 
 // f5.apply
@@ -78,10 +76,10 @@ function f5() {
 // ==================================================
 
 // Task 6
-// Научимся применять bind. Создадим новые функции bindF61, bindF62 куда мы добавим функцию f6 с контекстом div-6-1, div-6-2. Запустим эти функции для проверки.  
+// Научимся применять bind. Создадим новые функции bindF61, bindF62 куда мы добавим функцию f6 с контекстом div-6-1, div-6-2. Запустим эти функции для проверки.
 
 function f6() {
-    this.style.background = 'orange'
+    this.style.background = 'orange';
 }
 
 // let bindF61 = f6.bind()

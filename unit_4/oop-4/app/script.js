@@ -37,7 +37,7 @@
 class User {
     sayHello() {
         console.log(this.name + ' Hello ');
-        return this.name
+        return this.name;
     }
 }
 

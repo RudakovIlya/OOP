@@ -1,7 +1,5 @@
 class Button {
-
     constructor(width, height, background, value, className, parentSelector) {
-
         this.width = width;
 
         this.height = height;
@@ -13,11 +11,9 @@ class Button {
         this.className = className;
 
         this.parentSelector = document.querySelector(parentSelector);
-
     }
 
     render() {
-
         const button = document.createElement('button');
 
         button.setAttribute('type', 'button');
@@ -41,9 +37,14 @@ class Button {
         this.parentSelector.append(button);
 
         return button;
-
     }
-
 }
 
-const button = new Button(220, 45, '#39fe07a1', 'Button', 'new__button', '.button').render();
+const button = new Button(
+    220,
+    45,
+    '#39fe07a1',
+    'Button',
+    'new__button',
+    '.button'
+).render();
